@@ -85,7 +85,7 @@ public class Ej3InsertarEmpleados {//del 2 al 7
         }
         rs.close();
         if (director != null) {
-            rs = sentencia.executeQuery("SELECT * FROM EMPLEADOS WHERE apellido = '" + apellido + "'");
+            rs = sentencia.executeQuery("SELECT * FROM EMPLEADOS WHERE apellido = '" + director + "'");
 
             if (!rs.next()) {
                 throw new Exception("El director no existe en la tabla empleados");
