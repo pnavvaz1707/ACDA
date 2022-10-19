@@ -1,6 +1,7 @@
 package Trimestre1.T02.Ejercicios;
 
 import java.sql.*;
+import java.util.Date;
 import java.util.Scanner;
 
 public class Ej4ProductoClienteVenta {
@@ -9,7 +10,7 @@ public class Ej4ProductoClienteVenta {
             Scanner teclado = new Scanner(System.in);
             Class.forName("com.mysql.jdbc.Driver");
 
-            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/UNIDAD2", "root", "");
+            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/ejemplo", "root", "");
             Statement sentencia = conexion.createStatement();
             StringBuilder sql = new StringBuilder();
 
@@ -69,8 +70,6 @@ public class Ej4ProductoClienteVenta {
 
             System.out.println("Introduzca el id de la venta");
             int idVenta = teclado.nextInt();
-            System.out.println("Introduzca la fecha de la venta");
-            String fechaVenta = teclado.next();
             System.out.println("Introduzca el id del cliente");
             int idClienteVentas = teclado.nextInt();
             System.out.println("Introduzca el id del producto");
@@ -80,7 +79,7 @@ public class Ej4ProductoClienteVenta {
 
             sql.append("INSERT INTO VENTAS VALUES (");
             sql.append(idVenta).append(", ");
-            sql.append("'").append(fechaVenta).append("', ");
+            sql.append("NOW(), ");
             sql.append(idClienteVentas).append(", ");
             sql.append(idProductoVentas).append(", ");
             sql.append(cantidadVentas).append(")");
@@ -90,7 +89,7 @@ public class Ej4ProductoClienteVenta {
             sql = new StringBuilder();
             sql.append("SELECT * FROM PRODUCTOS");
             ResultSet rs = sentencia.executeQuery(sql.toString());
-            while (rs.next()){
+            while (rs.next()) {
                 System.out.println("ID --> " + rs.getInt(1));
                 System.out.println("DESCRIPCION --> " + rs.getString(2));
                 System.out.println("STOCK ACTUAL --> " + rs.getInt(3));
@@ -101,7 +100,7 @@ public class Ej4ProductoClienteVenta {
             sql = new StringBuilder();
             sql.append("SELECT * FROM CLIENTES");
             rs = sentencia.executeQuery(sql.toString());
-            while (rs.next()){
+            while (rs.next()) {
                 System.out.println("ID --> " + rs.getInt(1));
                 System.out.println("NOMBRE --> " + rs.getString(2));
                 System.out.println("DIRECCION --> " + rs.getString(3));
@@ -113,7 +112,7 @@ public class Ej4ProductoClienteVenta {
             sql = new StringBuilder();
             sql.append("SELECT * FROM VENTAS");
             rs = sentencia.executeQuery(sql.toString());
-            while (rs.next()){
+            while (rs.next()) {
                 System.out.println("ID --> " + rs.getInt(1));
                 System.out.println("FECHA VENTA --> " + rs.getString(2));
                 System.out.println("ID CLIENTE --> " + rs.getInt(3));
