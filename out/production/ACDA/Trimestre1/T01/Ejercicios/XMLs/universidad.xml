@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<universidad>
+    <departamento telefono="722 62 84 33" tipo="tipo1">
+        <codigo>2091</codigo>
+        <nombre>Departamento uno</nombre>
+        <empleado salario="250">
+            <puesto>Analista</puesto>
+            <nombre>Paco</nombre>
+        </empleado>
+    </departamento>
+</universidad>
