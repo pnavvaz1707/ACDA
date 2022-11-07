@@ -1,22 +1,18 @@
-package Trimestre1.T03.Ejercicios.Ej2;
+package Trimestre1.T03.Clase;
 
-public class Ej2Jugador {
-    private String nombre;
-    private String deporte;
-    private String ciudad;
-    private int edad;
+public class JugadorEjemplo {
+    String nombre;
+    String deporte;
+    String ciudad;
+    int edad;
 
-    private Ej2Pais pais;
-
-    public Ej2Jugador(String nombre, String deporte, String ciudad, int edad, Ej2Pais pais) {
+    public JugadorEjemplo(String nombre, String deporte, String ciudad, int edad) {
         this.nombre = nombre;
         this.deporte = deporte;
         this.ciudad = ciudad;
         this.edad = edad;
-        this.pais = pais;
     }
 
-    // getters y setters
     public String getNombre() {
         return nombre;
     }

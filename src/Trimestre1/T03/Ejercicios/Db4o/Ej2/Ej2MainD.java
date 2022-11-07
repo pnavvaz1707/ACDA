@@ -1,15 +1,12 @@
-package Trimestre1.T03.Ejercicios.Ej2;
+package Trimestre1.T03.Ejercicios.Db4o.Ej2;
 
-import Trimestre1.Colores;
-import Trimestre1.T03.Ejercicios.Ej1.Ej1Departamento;
-import Trimestre1.T03.Ejercicios.Ej1.Ej1Empleado;
 import Trimestre1.Utilidades;
 import com.db4o.Db4oEmbedded;
 import com.db4o.ObjectContainer;
 
 import java.util.Scanner;
 
-public class Ej2Main {
+public class Ej2MainD {
     final static String BD = "src/Trimestre1/T03/DBs/EQUIPOS.YAP";
 
     final static String[] MENU_OPCIONES = {
@@ -48,7 +45,7 @@ public class Ej2Main {
                     System.out.println("Introduce el nombre de pais");
                     String nombrePais = teclado.nextLine();
 
-                    Ej2Jugador jugador = new Ej2Jugador(nombre, deporte, ciudad, edad, new Ej2Pais(idPais, nombrePais));
+                    Ej2JugadorD jugador = new Ej2JugadorD(nombre, deporte, ciudad, edad, new Ej2PaisD(idPais, nombrePais));
                     db.store(jugador);
                 }
                 case 2 -> {

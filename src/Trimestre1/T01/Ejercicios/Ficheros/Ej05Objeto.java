@@ -4,7 +4,7 @@ import java.io.*;
 
 public class Ej05Objeto {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
-        File f = new File(Rutas.RUTA_DEPARTAMENTO_OBJETO);
+        File f = new File(RutasFicheros.RUTA_DEPARTAMENTO_OBJETO);
 
 
         FileOutputStream fileout=new FileOutputStream(f);

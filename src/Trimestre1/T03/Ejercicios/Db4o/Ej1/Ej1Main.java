@@ -1,10 +1,9 @@
-package Trimestre1.T03.Ejercicios.Ej1;
+package Trimestre1.T03.Ejercicios.Db4o.Ej1;
 
 import Trimestre1.Colores;
 import com.db4o.Db4oEmbedded;
 import com.db4o.ObjectContainer;
 
-import java.io.Console;
 import java.util.Scanner;
 
 public class Ej1Main {

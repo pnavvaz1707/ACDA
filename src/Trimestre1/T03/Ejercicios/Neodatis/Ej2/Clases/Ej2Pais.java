@@ -1,4 +1,4 @@
-package Trimestre1.T03.Ejercicios.Ej2;
+package Trimestre1.T03.Ejercicios.Neodatis.Ej2.Clases;
 
 public class Ej2Pais {
     private int id;

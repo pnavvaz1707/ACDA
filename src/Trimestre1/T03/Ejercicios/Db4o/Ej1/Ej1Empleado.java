@@ -1,4 +1,4 @@
-package Trimestre1.T03.Ejercicios.Ej1;
+package Trimestre1.T03.Ejercicios.Db4o.Ej1;
 
 public class Ej1Empleado {
     String nombre;

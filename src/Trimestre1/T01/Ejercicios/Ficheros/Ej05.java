@@ -11,7 +11,7 @@ import java.io.*;
 
 public class Ej05 {
     public static void main(String[] args) throws IOException {
-        File f = new File(Rutas.RUTA_DEPARTAMENTO);
+        File f = new File(RutasFicheros.RUTA_DEPARTAMENTO);
 
         FileOutputStream fos = new FileOutputStream(f);
         DataOutputStream dos = new DataOutputStream(fos);

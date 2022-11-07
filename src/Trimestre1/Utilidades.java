@@ -5,11 +5,16 @@ import java.util.Scanner;
 
 public class Utilidades {
 
-    public static void crearMenu(String[] MENU_OPCIONES) {
+    public static void crearMenuCon0(String[] MENU_OPCIONES) {
         for (int i = 0; i < MENU_OPCIONES.length - 1; i++) {
             Colores.imprimirAzul((i + 1) + ". " + MENU_OPCIONES[i]);
         }
         Colores.imprimirAzul("0. " + MENU_OPCIONES[MENU_OPCIONES.length - 1]);
+    }
+    public static void crearMenu(String[] MENU_OPCIONES) {
+        for (int i = 0; i < MENU_OPCIONES.length; i++) {
+            Colores.imprimirAzul((i + 1) + ". " + MENU_OPCIONES[i]);
+        }
     }
 
     public static void imprimirOpcion(String opcion) {
