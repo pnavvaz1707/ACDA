@@ -1,16 +1,14 @@
 package Trimestre1.T03.Ejercicios.Neodatis.Ej2.Clases;
 
-import Trimestre1.T03.Ejercicios.Db4o.Ej2.Ej2PaisD;
-
 public class Ej2Jugador {
     private String nombre;
     private String deporte;
     private String ciudad;
     private int edad;
 
-    private Ej2PaisD pais;
+    private Ej2Pais pais;
 
-    public Ej2Jugador(String nombre, String deporte, String ciudad, int edad, Ej2PaisD pais) {
+    public Ej2Jugador(String nombre, String deporte, String ciudad, int edad, Ej2Pais pais) {
         this.nombre = nombre;
         this.deporte = deporte;
         this.ciudad = ciudad;
@@ -51,11 +49,11 @@ public class Ej2Jugador {
         this.edad = edad;
     }
 
-    public Ej2PaisD getPais() {
+    public Ej2Pais getPais() {
         return pais;
     }
 
-    public void setPais(Ej2PaisD pais) {
+    public void setPais(Ej2Pais pais) {
         this.pais = pais;
     }
 
