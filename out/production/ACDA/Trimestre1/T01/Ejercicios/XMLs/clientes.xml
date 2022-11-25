@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<clientes>
+    <cliente numero="120">
+        <nombre>Pedro García</nombre>
+        <poblacion>Alh</poblacion>
+        <tlf>544 12 93 84</tlf>
+        <direccion>Malaga</direccion>
+    </cliente>
+</clientes>
