@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class Ej09 {
     public static void main(String[] args) {
-        File f = new File(Rutas.RUTA_FICHERO);
+        File f = new File(RutasFicheros.RUTA_FICHERO);
         try {
             Scanner teclado = new Scanner(System.in);
             FileReader fr = new FileReader(f);

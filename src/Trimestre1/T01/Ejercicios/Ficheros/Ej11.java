@@ -17,8 +17,8 @@ import java.io.*;
 
 public class Ej11 {
     public static void main(String[] args) {
-        File f = new File(Rutas.RUTA_FICHERO);
-        File fCopia = new File(Rutas.RUTA_FICHERO_TEMPORAL);
+        File f = new File(RutasFicheros.RUTA_FICHERO);
+        File fCopia = new File(RutasFicheros.RUTA_FICHERO_TEMPORAL);
 
         try {
             FileReader fr = new FileReader(f);

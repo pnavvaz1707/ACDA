@@ -1,6 +1,6 @@
 package Trimestre1.T01.Ejercicios.Ficheros;
 
-public class Rutas {
+public class RutasFicheros {
     public static String RUTA_DEPARTAMENTO = "src/Trimestre1/T01/Ejercicios/Ficheros/Departamentos.dat";
     public static String RUTA_DEPARTAMENTO_OBJETO = "src/Trimestre1/T01/Ejercicios/Ficheros/DepartamentosObjeto.dat";
     public static String RUTA_DEPARTAMENTO_TEMPORAL = "src/Trimestre1/T01/Ejercicios/Ficheros/DepartamentosTemporal.dat";

@@ -14,8 +14,8 @@ import java.util.Scanner;
 public class Ej06 {
     public static void main(String[] args) throws IOException
     {
-        File f = new File(Rutas.RUTA_DEPARTAMENTO);
-        File fTemporal = new File(Rutas.RUTA_DEPARTAMENTO_TEMPORAL);
+        File f = new File(RutasFicheros.RUTA_DEPARTAMENTO);
+        File fTemporal = new File(RutasFicheros.RUTA_DEPARTAMENTO_TEMPORAL);
 
         if (f.exists())
         {

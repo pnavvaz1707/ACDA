@@ -10,7 +10,7 @@ import java.io.*;
 
 public class Ej08 {
     public static void main(String[] args) {
-        File f = new File(Rutas.RUTA_FICHERO);
+        File f = new File(RutasFicheros.RUTA_FICHERO);
         try {
             FileReader fr = new FileReader(f);
             BufferedReader br = new BufferedReader(fr);
