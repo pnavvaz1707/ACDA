@@ -139,15 +139,14 @@ public class Ej2MainNeodatis {
                 System.out.println("Introduce el id del país");
                 int id = teclado.nextInt();
 
-                for (Ej2Pais p : paises) {
-                    if (p.getId() == id) {
-                        pais = p;
-                    }
-                }
-                if (pais == null) {
-                    throw new Exception("El id del país introducido no existe");
-                }
+                IQuery query = new CriteriaQuery(Ej2Pais.class, Where.equal("id", id));
+
+                pais = (Ej2Pais) odb.getObjects(query).getFirst();
+                System.out.println("Has seleccionado: " + pais.getNombrepais());
+
                 sigue = false;
+            } catch (IndexOutOfBoundsException e) {
+                Colores.imprimirRojo("No existe ese pais");
             } catch (Exception e) {
                 Colores.imprimirRojo(e.getMessage());
             }
