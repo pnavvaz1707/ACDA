@@ -1,7 +1,15 @@
 package Trimestre1.AuxiliarExamen;
 
+import com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -71,6 +79,7 @@ public class Auxiliar {
 
             } catch (InputMismatchException e) {
                 System.err.println("Debe introducir un número entero");
+                teclado.nextLine();
 
             } catch (Exception e) {
                 System.err.println(e.getMessage());
@@ -132,42 +141,13 @@ public class Auxiliar {
 
             } catch (InputMismatchException e) {
                 System.err.println("Debe introducir un número (si es decimal debe llevar el separador ',')");
+                teclado.nextLine();
 
             } catch (Exception e) {
                 System.err.println(e.getMessage());
             }
         }
         return num;
-    }
-
-    /**
-     * Método que pregunta al usuario si desea ver los siguientes 10 elementos
-     *
-     * @return (Devuelve un booleano de valor true si el usuario desea seguir o false si no lo desea)
-     */
-    public static boolean sigPagina() {
-        Scanner teclado = new Scanner(System.in);
-        boolean sigue;
-        boolean sigPagina = false;
-
-        do {
-            System.out.println("¿Desea ver los siguientes 10 números?");
-            String respuesta = teclado.nextLine().toLowerCase();
-
-            if (respuesta.equals("si") || respuesta.equals("sí")) {
-                sigPagina = true;
-                sigue = false;
-
-            } else if (respuesta.equals("no")) {
-                sigue = false;
-
-            } else {
-                System.err.println("Debe introducir la palabra 'si' o 'no'");
-                sigue = true;
-            }
-        } while (sigue);
-
-        return sigPagina;
     }
 
     /**
@@ -196,6 +176,37 @@ public class Auxiliar {
         }
         return fecha;
     }
+
+    /**
+     * Método para convertir una cadena de texto a una fecha tipo Date
+     *
+     * @param fecha (Cadena de texto que cumple el formato de fecha indicado en esta clase)
+     * @return (Devuelve la fecha en tipo Date)
+     * @throws ParseException (Excepción provocada si la cadena de texto pasada como parámetro no cumple el formato de la clase)
+     */
+    public static Date convertirStringADate(String fecha) throws ParseException {
+        return formatter.parse(fecha);
+    }
+
+    /**
+     * Método para leer línea por línea todos los ficheros y separarlos por campos separados por el carácter ";"
+     *
+     * @param f (Fichero a leer)
+     * @throws IOException (Excepción provocada al no existir el fichero)
+     */
+    public static void leerFichero(File f) throws IOException {
+        FileReader fr = new FileReader(f);
+        BufferedReader br = new BufferedReader(fr);
+
+        String linea;
+
+        while ((linea = br.readLine()) != null) {
+            String[] datos = linea.split(";");
+            System.out.println(Arrays.toString(datos));
+        }
+
+    }
+
 
     public static void main(String[] args) {
         int respuesta;

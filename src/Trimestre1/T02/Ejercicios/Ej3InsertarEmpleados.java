@@ -34,7 +34,6 @@ public class Ej3InsertarEmpleados {//del 2 al 7
             sql.append(salario).append(", ");
             sql.append(comision).append(", ");
             sql.append(depto_no).append(", NOW() )");
-            ;
 
             System.out.println("Sentencia --> " + sql);
             sentencia.execute(sql.toString());

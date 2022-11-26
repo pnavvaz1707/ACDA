@@ -1,13 +1,14 @@
 <component name="libraryTable">
   <library name="com.mysql.jdbc_5.1.5">
     <CLASSES>
-      <root url="jar://$USER_HOME$/OneDrive/Escritorio/librerias/com.mysql.jdbc_5.1.5.jar!/" />
-      <root url="jar://$USER_HOME$/OneDrive/Escritorio/librerias/db4o-8.0.184.15484-all-java5.jar!/" />
-      <root url="jar://$USER_HOME$/OneDrive/Escritorio/librerias/sqlite-jdbc-3.8.11.2.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/librerias/com.mysql.jdbc_5.1.5.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/librerias/db4o-8.0.184.15484-all-java5.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/librerias/neodatis-odb-1.9.30.689.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/librerias/sqlite-jdbc-3.8.11.2.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/OneDrive/Escritorio/librerias/sqlite-jdbc-3.8.11.2.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/librerias/sqlite-jdbc-3.8.11.2.jar!/" />
     </SOURCES>
   </library>
 </component>
