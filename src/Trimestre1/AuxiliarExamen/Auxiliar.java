@@ -30,20 +30,6 @@ public class Auxiliar {
     private static final SimpleDateFormat formatter = new SimpleDateFormat(formato);
 
     /**
-     * Lista de opciones que contiene el menú de la aplicación
-     */
-    static String[] MENU_OPCIONES = {
-            "Pasar base de datos de SQL a Neodatis",
-            "Registrar un libro",
-            "Eliminar un usuario",
-            "Modificar un préstamo",
-            "Ver los préstamos entregados tarde por un usuario específico",
-            "Ver los libros de un género y precio determinados",
-            "Ver los préstamos realizados en una provincia y período de tiempo determinados",
-            "Salir"
-    };
-
-    /**
      * Método para crear el menú según las opciones pasadas por parámetro
      *
      * @param MENU_OPCIONES (Lista de opciones a imprimir como menú)
@@ -209,6 +195,17 @@ public class Auxiliar {
 
 
     public static void main(String[] args) {
+        String[] MENU_OPCIONES = {
+                "Pasar base de datos de SQL a Neodatis",
+                "Registrar un libro",
+                "Eliminar un usuario",
+                "Modificar un préstamo",
+                "Ver los préstamos entregados tarde por un usuario específico",
+                "Ver los libros de un género y precio determinados",
+                "Ver los préstamos realizados en una provincia y período de tiempo determinados",
+                "Salir"
+        };
+
         int respuesta;
         do {
             //Creamos el menú y solicitamos al usuario que seleccione una opción
