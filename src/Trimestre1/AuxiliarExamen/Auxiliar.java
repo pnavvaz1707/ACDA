@@ -1,12 +1,9 @@
 package Trimestre1.AuxiliarExamen;
 
-import com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
@@ -194,15 +191,18 @@ public class Auxiliar {
     }
 
 
+    /**
+     * Plantilla para empezar el programa
+     */
     public static void main(String[] args) {
         String[] MENU_OPCIONES = {
-                "Pasar base de datos de SQL a Neodatis",
-                "Registrar un libro",
-                "Eliminar un usuario",
-                "Modificar un préstamo",
-                "Ver los préstamos entregados tarde por un usuario específico",
-                "Ver los libros de un género y precio determinados",
-                "Ver los préstamos realizados en una provincia y período de tiempo determinados",
+                "Opción 1",
+                "Opción 2",
+                "Opción 3",
+                "Opción 4",
+                "Opción 5",
+                "Opción 6",
+                "Opción 7",
                 "Salir"
         };
 
