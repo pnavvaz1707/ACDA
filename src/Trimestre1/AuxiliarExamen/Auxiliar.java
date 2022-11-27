@@ -172,26 +172,6 @@ public class Auxiliar {
     }
 
     /**
-     * Método para leer línea por línea todos los ficheros y separarlos por campos separados por el carácter ";"
-     *
-     * @param f (Fichero a leer)
-     * @throws IOException (Excepción provocada al no existir el fichero)
-     */
-    public static void leerFichero(File f) throws IOException {
-        FileReader fr = new FileReader(f);
-        BufferedReader br = new BufferedReader(fr);
-
-        String linea;
-
-        while ((linea = br.readLine()) != null) {
-            String[] datos = linea.split(";");
-            System.out.println(Arrays.toString(datos));
-        }
-
-    }
-
-
-    /**
      * Plantilla para empezar el programa
      */
     public static void main(String[] args) {
