@@ -1,5 +1,7 @@
 package Trimestre1.T02.Ejercicios;
 
+import Trimestre1.AuxiliarExamen.Auxiliar;
+
 import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -12,7 +14,8 @@ public class Ej3InsertarEmpleados {//del 2 al 7
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/ejemplo", "root", "");
-            Statement sentencia = conexion.createStatement();
+//            Statement sentencia = conexion.createStatement();
+            PreparedStatement sentencia = conexion.prepareStatement("INSERT INTO EMPLEADOS VALUES(?,?,?,?,?,?,?,?)");
             int num_emp = tecladoInt("Introduce el número de empleado");
             String apellido = tecladoString("Introduce el apellido"); //no null
             String profesion = tecladoString("Introduce la profesión"); //no null
@@ -20,23 +23,36 @@ public class Ej3InsertarEmpleados {//del 2 al 7
             float salario = tecladoFloat("Introduce el salario"); //mayor que 0
             float comision = tecladoFloat("Introduce la comisión"); //mayor que 0
             int depto_no = tecladoInt("Introduce el número de departamento"); // debe existir en departamentos
+            java.util.Date prueba = Auxiliar.solicitarFecha("Pon la fecha");
+            Date fecha = new Date(prueba.getTime());
+
+            sentencia.setInt(1, num_emp);
+            sentencia.setString(2, apellido);
+            sentencia.setString(3, profesion);
+            sentencia.setString(4, director);
+            sentencia.setFloat(5, salario);
+            sentencia.setFloat(6, comision);
+            sentencia.setInt(7, depto_no);
+            sentencia.setDate(8, fecha);
+            sentencia.executeUpdate();
 
 
-            comprobarErrores(sentencia, num_emp, apellido, profesion, director, salario, comision, depto_no);
-
-
-            StringBuilder sql = new StringBuilder();
-            sql.append("INSERT INTO EMPLEADOS VALUES (");
-            sql.append(num_emp).append(", ");
-            sql.append("'").append(apellido).append("', ");
-            sql.append("'").append(profesion).append("', ");
-            sql.append("'").append(director).append("', ");
-            sql.append(salario).append(", ");
-            sql.append(comision).append(", ");
-            sql.append(depto_no).append(", NOW() )");
-
-            System.out.println("Sentencia --> " + sql);
-            sentencia.execute(sql.toString());
+//            comprobarErrores(sentencia, num_emp, apellido, profesion, director, salario, comision, depto_no);
+//
+//
+//            StringBuilder sql = new StringBuilder();
+//            sql.append("INSERT INTO EMPLEADOS VALUES (");
+//            sql.append(num_emp).append(", ");
+//            sql.append("'").append(apellido).append("', ");
+//            sql.append("'").append(profesion).append("', ");
+//            sql.append("'").append(director).append("', ");
+//            sql.append(salario).append(", ");
+//            sql.append(comision).append(", ");
+//            sql.append(depto_no).append(", ");
+//            sql.append(fecha).append(")");
+//
+//            System.out.println("Sentencia --> " + sql);
+//            sentencia.execute(sql.toString());
         } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         } catch (Exception e) {
