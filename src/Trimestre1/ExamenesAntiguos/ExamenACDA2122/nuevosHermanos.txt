@@ -1,0 +1,11 @@
+DNI#NOMBRE#APELLIDOS#DIRECCION#HERMANDAD
+11111111A#Celestino#Casal-Carro#Pl. Virgen Blanca 130#1
+23456789B#Amando#Manzanares Díaz#Calle Larios 23#9
+34567891C#René#Mateu Valentín#Calle Salinas 56#9
+45678912D#Fanny#Morales Talavera#Plaza Zaldívar 76#1
+56789123E#Almudena#Llanos Castells#Avenida de Fátima 76#1
+67891234F#Edelmiro#Alemán-Hoyos#Hoyo de Esparteros, 87#1
+78912345G#Bibiana#Iniesta#Pasillo de Nateras, 23#1
+89123456H#Fidel#Balaguer Andreu#Calle Cerrojo, 76#13
+91234567I#Eduardo#Roman Murcia#Calle Santiago, 98#12
+12345678J#Visitación#Acosta Baeza#Plaza de la Victoria 34#9
